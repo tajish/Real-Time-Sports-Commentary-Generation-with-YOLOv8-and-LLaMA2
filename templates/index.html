@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Your Video</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      color: #fff;
+    }
+
+    .upload-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      width: 350px;
+      backdrop-filter: blur(10px);
+    }
+
+    .upload-box h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .custom-file-label {
+      display: block;
+      font-size: 1rem;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(45deg, #ff6a00, #ff8c00);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="upload-box">
+    <h1>Upload Your Video 🥎</h1>
+    <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+      <label class="file-input">
+        <input type="file" name="video" accept=".mp4" required>
+        <span class="custom-file-label">📁 Choose a video file (MP4)</span>
+      </label>
+      <br>
+      <input type="submit" class="submit-btn" value="Upload 🚀">
+    </form>
+  </div>
+</body>
+</html>
