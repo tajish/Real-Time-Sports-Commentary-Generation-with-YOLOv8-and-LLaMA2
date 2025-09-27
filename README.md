@@ -60,7 +60,7 @@ Set up your environment variables by adding your **Groq API key** to a `config.j
 
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/tajish/your-repo-name.git
+   git clone https://github.com/tajish/Real-Time-Sports-Commentary-Generation-with-YOLOv8-and-LLaMA2.git
    cd your-repo-name
    ```  
 
